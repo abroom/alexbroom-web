@@ -1,3 +1,18 @@
+# alexbroom.com
+**Version 3**
+
+Now a React App.  Oh my...
+
+Also, why are you reading this?
+
+Better question: Why am I writing this?
+
+Final question: Why do I keep writing questions?
+
+Ultimate question: Why did I keep these questions from version 2?
+
+## Details
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 
+# static resources
+/public/images/biopics
+
 # testing
 /coverage
 
