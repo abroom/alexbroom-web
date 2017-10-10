@@ -8,7 +8,7 @@
   </defs>
   <g fill="#551a8b" style="transform-origin:center">
     <circle cx="250" cy="250" r="125"/>
-    <text font-size="73">
+    <text font-size="73" font-family="times, serif">
       <textPath href="#admbPath">
         Alexander Do McIntosh Broom
       </textPath>

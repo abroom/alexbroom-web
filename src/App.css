@@ -2,8 +2,11 @@ html {
   background-color: #F7F4FA;
 }
 
+h1 {
+  color: #551a8b;
+}
+
 .App {
-  text-align: center;
   background-color: #F7F4FA;
 }
 
@@ -59,8 +62,26 @@ html {
   font-size: large;
 }
 
+.btn-toolbar-wrapper {
+  height: 50px;
+}
+.btn-toolbar-wrapper > div {
+  position: fixed;
+  top: 100px;
+  height: 50px;
+  padding: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: #551a8b;
+  z-index: 10;
+}
+
+.btn-toolbar-wrapper > div > div {
+  display: inline-block;
+}
+
 .carousel {
-  min-height: 693px;
+  height: 700px;
   background-color: #551a8b;
 }
 
@@ -68,11 +89,30 @@ html {
   background-color: #551a8b;
 }
 
-#about {
-  text-align: left;
+.carousel img {
+  height: 700px !important;
+}
+
+.img-scroll {
+  overflow-x: scroll;
+}
+
+.main {
   padding: 0 20%;
 }
 
-h1 {
+#about p {
+  font-size: 1.1em;
+}
+
+#about b {
   color: #551a8b;
+}
+
+#resume p p {
+  margin-left: 2em;
+}
+
+#not-found {
+  text-align: center;
 }
