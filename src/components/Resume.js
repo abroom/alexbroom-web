@@ -48,14 +48,12 @@ class Education extends React.Component {
     return (
       <div id="education">
         <h1>Education</h1>
-        <p>
-          <b>Colorado School of Mines</b>
-          <p>Golden, Colorado
-            <br/>President's Scholarship
-            <br/>Bachelor of Science in Computer Science
-            <br/>Graduated May 9, 2014
-            <br/><b>CSCI GPA: 3.0</b>
-          </p>
+        <p className="title"><b>Colorado School of Mines</b></p>
+        <p className="nested">Golden, Colorado
+          <br/>President's Scholarship
+          <br/>Bachelor of Science in Computer Science
+          <br/>Graduated May 9, 2014
+          <br/><b>CSCI GPA: 3.0</b>
         </p>
       </div>
     );
@@ -149,22 +147,14 @@ class Experience extends React.Component {
     return (
       <div id="experience">
         <h1>Experience</h1>
-        <p>
-          <b>Zayo Group - Jr. Application Developer</b> - Boulder, CO - September 2014
-          <p>Developed and maintained internal and external SalesForce scalable applications from start until completion.  Part of design and implementaiton of database access, event handling as records progressed through the system, and customer-facing front end web application implementation using JavaScript, JQuery, and AngularJS.</p>
-        </p>
-        <p>
-          <b>Symplified - Field Session Intern</b> - Boulder, CO - Summer 2012
-          <p>Wrote base code for a REST applications in Java, .NET, Ruby and PHP.  Created basic GUIs in order for Symplified to demo the REST application to clients.  As a field session intern, progress was evaluated by Colorado School of Mines and received an A.</p>
-        </p>
-        <p>
-          <b>Rice University - Programming Intern</b> - Houston, TX - Summer 2011
-          <p>Upgraded Java and C++ research software for analyzing computer performance profiles.  Implemented file reading and writing with Google Protocol Buffers instead of XML.  Reduced save files from over 1 GB to less than 100 MB.</p>
-        </p>
-        <p>
-          <b>University of Texas MD Anderson Cancer Center</b> - Houston, TX - Summer 2009
-          <p>Used Adobe Photoshop and Gimp to measure br/east tumor volumes.  Conducted simulations for br/east tumor volume estimation.  Assisted pathology researchers with microscope slide organizations.</p>
-        </p>
+        <p className="title"><b>Zayo Group - Jr. Application Developer</b> - Boulder, CO - September 2014</p>
+        <p className="nested">Developed and maintained internal and external SalesForce scalable applications from start until completion.  Part of design and implementaiton of database access, event handling as records progressed through the system, and customer-facing front end web application implementation using JavaScript, JQuery, and AngularJS.</p>
+        <p className="title"><b>Symplified - Field Session Intern</b> - Boulder, CO - Summer 2012</p>
+        <p className="nested">Wrote base code for a REST applications in Java, .NET, Ruby and PHP.  Created basic GUIs in order for Symplified to demo the REST application to clients.  As a field session intern, progress was evaluated by Colorado School of Mines and received an A.</p>
+        <p className="title"><b>Rice University - Programming Intern</b> - Houston, TX - Summer 2011</p>
+        <p className="nested">Upgraded Java and C++ research software for analyzing computer performance profiles.  Implemented file reading and writing with Google Protocol Buffers instead of XML.  Reduced save files from over 1 GB to less than 100 MB.</p>
+        <p className="title"><b>University of Texas MD Anderson Cancer Center - Pathology Intern</b> - Houston, TX - Summer 2009</p>
+        <p className="nested">Used Adobe Photoshop and Gimp to measure br/east tumor volumes.  Conducted simulations for br/east tumor volume estimation.  Assisted pathology researchers with microscope slide organizations.</p>
       </div>
     );
   }
