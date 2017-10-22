@@ -8,7 +8,7 @@ export default class Home extends React.Component {
         <Biopics/>
         <div id="about" className="main">
           <h1>Welcome!</h1>
-          <h4>You must be here to read about me, <b>Alexander Do McIntosh Broom</b>. And by the way, you can just call me <b>Alex</b>.</h4>
+          <h4>You must be here to read about me, <b>Alexander Do McIntosh Broom</b>. By the way, you can just call me <b>Alex</b>.</h4>
           <p>
             I am a <b>creator</b>. From writing stories to writing code, from sketchings to cartoons, from lasagnas to cakes, from compliments to <a href="http://lmgtfy.com/?q=sarcasm">sarcasm</a>, it does not matter, I love to create. There is too much that I want to learn. Seriously, it is hard to choose. Regardless, I work to make my dreams into reality. Naturally, I gravitated towards the wonders known and unknown of <b>computer science</b>.  For what aspect of humanity does not take some form in our digital world. As discoveries of new digital logic are made, every industry races to be the first to make the next successful application. We live in the midst of the creation of a whole new digital world. A world defined by <b>Code</b>. So how could I not love <b>Code</b>.
           </p>
