@@ -2,17 +2,6 @@
   "name": "alexbroom-web",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "6.11.x"
-  },
-  "scripts": {
-    "start": "node server",
-    "heroku-postbuild": "cd react-ui/ && npm install --only=dev && npm install && npm run build"
-  },
-  "cacheDirectories": [
-    "node_modules",
-    "react-ui/node_modules"
-  ],
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.18.2",
@@ -30,5 +19,12 @@
     "react-router-bootstrap": "^0.24.4",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.12"
-  }
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:5000/"
 }

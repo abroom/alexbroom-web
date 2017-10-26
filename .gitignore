@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/react-ui/node_modules
 
 # static resources
 /public/images/biopics
@@ -11,6 +12,7 @@
 
 # production
 /build
+/react-ui/build
 
 # misc
 .DS_Store
