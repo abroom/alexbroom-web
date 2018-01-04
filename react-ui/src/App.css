@@ -32,7 +32,6 @@ h1 {
 }
 
 .App-header .navbar-toggle {
-  /* (100px - button height of 34px) / 2 = 33px */
   margin-top: 33px;
   padding: 9px 10px !important;
 }
@@ -56,16 +55,27 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  .App-header {
+    position: static;
+  }
   .App-header .navbar-brand {
     width: 100%;
   }
-  .App-logo {
+  .App-header .App-logo {
     margin: auto;
+  }
+  .App-header .nav {
+    text-align: center;
+  }
+  .App-header-wrapper {
+    height: 400px;
+  }
+  .carousel-caption {
+    margin-bottom: 50px;
   }
 }
 @media (min-width: 768px) {
   .App-header .navbar-nav > li > a {
-    /* (100px - line-height of 27px) / 2 = 36.5px */
     padding-top: 36.5px;
     padding-bottom: 36.5px;
     line-height: 27px;
