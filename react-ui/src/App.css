@@ -54,34 +54,6 @@ h1 {
   font-size: 1.65em;
 }
 
-@media (max-width: 768px) {
-  .App-header {
-    position: static;
-  }
-  .App-header .navbar-brand {
-    width: 100%;
-  }
-  .App-header .App-logo {
-    margin: auto;
-  }
-  .App-header .nav {
-    text-align: center;
-  }
-  .App-header-wrapper {
-    height: 400px;
-  }
-  .carousel-caption {
-    margin-bottom: 50px;
-  }
-}
-@media (min-width: 768px) {
-  .App-header .navbar-nav > li > a {
-    padding-top: 36.5px;
-    padding-bottom: 36.5px;
-    line-height: 27px;
-  }
-}
-
 .App-intro {
   font-size: large;
 }
@@ -154,4 +126,35 @@ h1 {
 
 #not-found {
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    position: static;
+  }
+  .btn-toolbar-wrapper > div {
+    position: static;
+  }
+  .App-header .navbar-brand {
+    width: 100%;
+  }
+  .App-header .App-logo {
+    margin: auto;
+  }
+  .App-header .nav {
+    text-align: center;
+  }
+  .App-header-wrapper {
+    height: 400px;
+  }
+  .carousel-caption {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .App-header .navbar-nav > li > a {
+    padding-top: 36.5px;
+    padding-bottom: 36.5px;
+    line-height: 27px;
+  }
 }
