@@ -193,12 +193,10 @@ export default class Contact extends React.Component {
           disabled: true,
           showSuccessMessageSent: true
         });
-        console.log(response);
       })
       .catch(function(error){
         window.sendMessageInProgress = false;
         thisApp.setState({showErrorMessageSent: true});
-        console.log(error);
       });
     } else {
       window.sendMessageInProgress = false;

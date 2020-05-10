@@ -3,22 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.19.2",
     "body-parser": "^1.18.2",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "dotenv": "^4.0.0",
     "email-validator": "^1.1.1",
     "express": "^4.16.2",
     "express-sanitizer": "^1.0.2",
     "font-awesome": "^4.7.0",
-    "mailgun-js": "^0.13.1",
-    "morgan": "^1.9.0",
+    "mailgun-js": "^0.22.0",
+    "morgan": "^1.10.0",
     "react": "^15.6.2",
     "react-bootstrap": "^0.31.3",
     "react-dom": "^15.6.2",
     "react-router-bootstrap": "^0.24.4",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.12"
+    "react-scripts": "^3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,5 +26,17 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:5000/"
+  "proxy": "http://localhost:5000/",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
