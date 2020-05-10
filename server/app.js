@@ -50,10 +50,8 @@ app.post('/contact', function(req, res) {
 
   mailgun.messages().send(data, function (error, body) {
     if (error) {
-      console.log('mailgun send error:\n' + error);
       res.status(400).send(error);
     } else {
-      console.log(body);
       res.send('POST request to Contact');
     }
   });
