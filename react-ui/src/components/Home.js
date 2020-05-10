@@ -74,7 +74,7 @@ class Biopics extends React.Component {
     const carouselItems = biopics.map(biopic =>
       <Carousel.Item>
         <img className="img-responesive center-block" src={biopic.src} alt={biopic.caption}/>
-        <Carousel.Caption><p>{biopic.caption}</p></Carousel.Caption>
+        <Carousel.Caption><p><Badge>{biopic.caption}</Badge></p></Carousel.Caption>
       </Carousel.Item>
     );
 
