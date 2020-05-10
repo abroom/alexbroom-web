@@ -62,30 +62,30 @@ class Education extends React.Component {
 
 class AreasOfStudy extends React.Component {
   render() {
+    const areasOfStudy = [
+      'Algorithms',
+      'Computer Graphics',
+      'Computer Organization',
+      'Computer Simulation',
+      {display: 'Computer Vision for Faces', href: 'http://courses.learnopencv.com/p/computer-vision-for-faces'},
+      'Data Structures',
+      'Discrete Mathematics',
+      'Elements of Computing Systems',
+      {display: 'Machine Learning by Standford University', href: 'https://www.coursera.org/account/accomplishments/records/AEJAFWLU6TR5'},
+      'Mobile Programming',
+      'Operating Systems',
+      'Programming Languages',
+      'Software Engineering',
+      'User Interfaces',
+      'Web Applications',
+      'Web Programming',
+      'Core Courses for Mechanical Engineering',
+    ]
+
     return (
       <div id="areas-of-study">
         <h1>Areas of Study</h1>
-        <Grid fluid>
-          <Row>
-            <Col md={4}>Algorithms</Col>
-            <Col md={4}>Computer Graphics</Col>
-            <Col md={4}>Computer Organization</Col>
-            <Col md={4}>Computer Simulation</Col>
-            <Col md={4}><a href="http://courses.learnopencv.com/p/computer-vision-for-faces">Computer Vision for Faces</a></Col>
-            <Col md={4}>Data Structures</Col>
-            <Col md={4}>Discrete Mathematics</Col>
-            <Col md={4}>Elements of Computing Systems</Col>
-            <Col md={4}><a href="https://www.coursera.org/account/accomplishments/records/AEJAFWLU6TR5">Machine Learning by Standford University</a></Col>
-            <Col md={4}>Mobile Programming</Col>
-            <Col md={4}>Operating Systems</Col>
-            <Col md={4}>Programming Languages</Col>
-            <Col md={4}>Software Engineering</Col>
-            <Col md={4}>User Interfaces</Col>
-            <Col md={4}>Web Applications</Col>
-            <Col md={4}>Web Programming</Col>
-            <Col md={4}>Core Courses for Mechanical Engineering</Col>
-          </Row>
-        </Grid>
+        {createGrid(areasOfStudy, 6)}
       </div>
     );
   }
@@ -93,50 +93,54 @@ class AreasOfStudy extends React.Component {
 
 class Software extends React.Component {
   render() {
+    const software = [
+      '.NET Core',
+      'Adobe Illustrator',
+      'Adobe Photoshop',
+      'AngularJS',
+      'Apex',
+      'Bash',
+      'Bootstrap',
+      'C',
+      'C++',
+      'C#',
+      'CSS',
+      'Gimp',
+      'Git',
+      'HTML',
+      'Java',
+      'JavaScript',
+      'JQuery',
+      'JSON',
+      'LibreOffice',
+      'Linux',
+      'Mac OS X',
+      'MATLAB',
+      'Microsoft Windows',
+      'Microsoft Office',
+      'MySQL',
+      'Node.js',
+      'PHP',
+      'PostgreSQL',
+      'Python',
+      'Rails',
+      'React',
+      'Ruby',
+      'SalesForce',
+      'SCSS',
+      'Solidworks',
+      'SOQL',
+      'SQLite',
+      'Sublime Text',
+      'TypeScript',
+      'Unity',
+      'XML',
+    ];
+
     return (
       <div id="software">
         <h1>Software</h1>
-        <Grid fluid>
-          <Col md={2}>.NET</Col>
-          <Col md={2}>Adobe Illustrator</Col>
-          <Col md={2}>Adobe Photoshop</Col>
-          <Col md={2}>AngularJS</Col>
-          <Col md={2}>Apex</Col>
-          <Col md={2}>Bash</Col>
-          <Col md={2}>Bootstrap</Col>
-          <Col md={2}>C</Col>
-          <Col md={2}>C++</Col>
-          <Col md={2}>C#</Col>
-          <Col md={2}>CSS</Col>
-          <Col md={2}>Gimp</Col>
-          <Col md={2}>Git</Col>
-          <Col md={2}>HTML</Col>
-          <Col md={2}>Java</Col>
-          <Col md={2}>JavaScript</Col>
-          <Col md={2}>JQuery</Col>
-          <Col md={2}>JSON</Col>
-          <Col md={2}>LibreOffice</Col>
-          <Col md={2}>Linux</Col>
-          <Col md={2}>Mac OS X</Col>
-          <Col md={2}>MATLAB</Col>
-          <Col md={2}>Microsoft Windows</Col>
-          <Col md={2}>Microsoft Office</Col>
-          <Col md={2}>MySQL</Col>
-          <Col md={2}>Node.js</Col>
-          <Col md={2}>PHP</Col>
-          <Col md={2}>PostgreSQL</Col>
-          <Col md={2}>Python</Col>
-          <Col md={2}>Rails</Col>
-          <Col md={2}>React</Col>
-          <Col md={2}>Ruby</Col>
-          <Col md={2}>SalesForce</Col>
-          <Col md={2}>Solidworks</Col>
-          <Col md={2}>SOQL</Col>
-          <Col md={2}>SQLite</Col>
-          <Col md={2}>Sublime Text</Col>
-          <Col md={2}>Unity</Col>
-          <Col md={2}>XML</Col>
-        </Grid>
+        {createGrid(software, 3)}
       </div>
     );
   }
@@ -147,6 +151,8 @@ class Experience extends React.Component {
     return (
       <div id="experience">
         <h1>Experience</h1>
+        <p className="title"><b>Conga - Senior Engineer</b> - Broomfield, CO - February 2018</p>
+        <p className="nested">Full stack developer as part of the Conga Sign team. Stack used a Java Spring Boot backend with a React frontend. Product was integrated within the Salesforce ecosystem, but core functionality hosted on AWS. Further work in dev ops to migrate from AWS Elastic Beanstalk to Kubernetes on AWS EC2. Part of 2 person team to write SMS microservice in C# .NET Core for all Conga Suite products to use, which leveraged AWS SNS. Responsible for story grooming, code quality, and test suite maintenance. Lead creation of onboarding documentation, process, and training of new team members as product quickly grew.</p>
         <p className="title"><b>Zayo Group - Jr. Application Developer</b> - Boulder, CO - September 2014</p>
         <p className="nested">Developed and maintained internal and external SalesForce scalable applications from start until completion.  Part of design and implementaiton of database access, event handling as records progressed through the system, and customer-facing front end web application implementation using JavaScript, JQuery, and AngularJS.</p>
         <p className="title"><b>Symplified - Field Session Intern</b> - Boulder, CO - Summer 2012</p>
@@ -177,7 +183,7 @@ class FunEnrichment extends React.Component {
   render() {
     return (
       <div id="fun-enrichment">
-        <h1>Fun & Enrichment</h1>
+        <h1>Fun &amp; Enrichment</h1>
         <p>Designed Prototype satellite to measure high altitude albedo reflection from clouds for Lockheed Martin</p>
         <p>Designed a heat recovery system for wood-burning ovens to lower use of gas powered water heating system</p>
         <p>Volunteered at University of Texas MD Anderson Cancer Center during summers from 2006 until 2009</p>
@@ -198,4 +204,12 @@ class FunEnrichment extends React.Component {
       </div>
     );
   }
+}
+
+function createGrid(items, colWidth) {
+  return (
+    <Grid fluid>
+      {items.map(item => <Col md={colWidth}>{item.display ? <a target="_blank" href={item.href}>{item.display}</a> : item}</Col>)}
+    </Grid>
+  );
 }

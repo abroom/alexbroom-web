@@ -32,206 +32,55 @@ export default class Home extends React.Component {
 
 class Biopics extends React.Component {
   render() {
+    const biopics = [
+      {caption: 'Austin Japanese Tea Ceremony', src: 'https://drive.google.com/uc?export=view&id=1e3fByMlP-qy8TtzY0fI4-y1rfXclOyPh'},
+      {caption: 'Elisabeth', src: 'https://drive.google.com/uc?export=view&id=1JUM1pNFQgHx2xu1Yi1Eq0_6R58X2QyDb'},
+      {caption: 'Justin & Adam Halloween', src: 'https://drive.google.com/uc?export=view&id=1bJZliHQsiVw4uUx51Le8b0oeUL6Xg0Lq'},
+      {caption: 'Alicia & Elias', src: 'https://drive.google.com/uc?export=view&id=19k3Wgy5A7A_OmUdYjzv06MgDpBZQGZfx'},
+      {caption: 'Dad', src: 'https://drive.google.com/uc?export=view&id=1EzczEPi7HN4jCJ_cFzI0XYXl-diSgEDK'},
+      {caption: 'Natalya, Thomas, & Mum', src: 'https://drive.google.com/uc?export=view&id=1wevuvLZur7BoHwp3zPK8rYJKlurS941Q'},
+      {caption: 'Bike Power', src: 'https://drive.google.com/uc?export=view&id=1K99iIWvKgfg2TMMIAQV-R7QEYiw0fe8a'},
+      {caption: 'David, Isabelle, Jason, & Mum', src: 'https://drive.google.com/uc?export=view&id=1N1UbgysUPuG7_MgFjxXZpmtZIz6rVliG'},
+      {caption: 'Mum', src: 'https://drive.google.com/uc?export=view&id=1NucIFA-iPtWBG5oAbQ2WJ2z4_bY8NvBU'},
+      {caption: 'Irina, Natalya, Thomas & Dad', src: 'https://drive.google.com/uc?export=view&id=13meD9yFVNQD2VrhQwFhFr2RsarkH4kDm'},
+      {caption: 'Mum', src: 'https://drive.google.com/uc?export=view&id=1k6VQ2426LO96NSRyHuL90nOf15zEp0S3'},
+      {caption: 'New York City', src: 'https://drive.google.com/uc?export=view&id=1-j452kFTtDcPj5pT2XmldA5OaCWvrThN'},
+      {caption: 'Dad', src: 'https://drive.google.com/uc?export=view&id=1PIjUo1NrF0pp7huuHU7cbWpTAGXK4t5y'},
+      {caption: 'Eric, Whitney, Peter, & David', src: 'https://drive.google.com/uc?export=view&id=153UycoAdTdwzsKTHhV3Iydipg2p4ZFue'},
+      {caption: 'Ali, Mary, Barbara, Whitney, & Anna', src: 'https://drive.google.com/uc?export=view&id=1uGiU65FJjjIgfd75zbeywRffBT8h5Ou8'},
+      {caption: 'Peace Corps', src: 'https://drive.google.com/uc?export=view&id=14VuQxk-XEqDc-BSU14dZIxKIJY6x5scb'},
+      {caption: 'Austin and Sampson', src: 'https://drive.google.com/uc?export=view&id=1cbOJQU-lk2iy5zm5695r61gHGE5JpadV'},
+      {caption: 'David', src: 'https://drive.google.com/uc?export=view&id=1AVoWHyLqw-7gLcaTw7dA8tIi9oOABnP9'},
+      {caption: 'Sampson', src: 'https://drive.google.com/uc?export=view&id=1zLqy0RcU298IiZ_5YZgdenVV1QkHrV7r'},
+      {caption: 'Kozub & Sampson', src: 'https://drive.google.com/uc?export=view&id=1Yulon_KdjDqdRT4-KFtJe3OLaRTFZFTs'},
+      {caption: 'Brenda, Karen, Jimmy, & Thomas', src: 'https://drive.google.com/uc?export=view&id=1DvE9ObfsN3QB9SJS4mj2EmtaS6187zNL'},
+      {caption: 'Polish Tavern', src: 'https://drive.google.com/uc?export=view&id=1I4MiGeiVAJghCvmPYfzs8YQ9_oveLsYj'},
+      {caption: 'Jimmy', src: 'https://drive.google.com/uc?export=view&id=19S-pryuRGyjmbL09VE6707B3DYKhPqSX'},
+      {caption: 'Ba', src: 'https://drive.google.com/uc?export=view&id=1JGgaG4gno2V73hIEeX4kZkWQ6170txif'},
+      {caption: 'Dad', src: 'https://drive.google.com/uc?export=view&id=1Hs6hcN0q-IiGIR-RvPm-JFlVnjFNHwde'},
+      {caption: 'Dad & Mum', src: 'https://drive.google.com/uc?export=view&id=1f_Ak_jraFR86pVDAJWL-RYybTgNIHshN'},
+      {caption: 'Brooms', src: 'https://drive.google.com/uc?export=view&id=1qczZ_3tkwRwbugB7twb5qNL2aM1XLN8o'},
+      {caption: 'Sjaan', src: 'https://drive.google.com/uc?export=view&id=1ODMDXD6YH45x9u5tiMNxMvtHLyphWbFt'},
+      {caption: 'Ba, Angela, & Cuong', src: 'https://drive.google.com/uc?export=view&id=1SpoQOQ-H1s73RYwl7cZNBfgSZ3ZXk6R1'},
+      {caption: 'Travis', src: 'https://drive.google.com/uc?export=view&id=1MpjrUWA1M4JZ7Pyupt50-j3yPNXmXzKe'},
+      {caption: 'Graduation', src: 'https://drive.google.com/uc?export=view&id=1MapdxpIiIZmJ2gtNb1a5JCkSnmJ9slyV'},
+      {caption: 'Paintball', src: 'https://drive.google.com/uc?export=view&id=1_2yErJjUMtXzYEQiG__ELOUua6AWHvjY'},
+      {caption: 'Chris', src: 'https://drive.google.com/uc?export=view&id=19cM6PbDctncSCkXiFyTWa7P-1fyrBdX-'},
+      {caption: 'Mum', src: 'https://drive.google.com/uc?export=view&id=1scGHgqYdyJKsexUQHBo0qcZXmgF9Y_s3'},
+      {caption: 'The White House', src: 'https://drive.google.com/uc?export=view&id=1GKEB2wssIsdCowgr_k-FoXuBYdSXd2UX'},
+      {caption: 'First Suit', src: 'https://drive.google.com/uc?export=view&id=1hVPqRO3zKQqKBIa_BtX2j6byLJ28WrNM'},
+    ];
+
+    const carouselItems = biopics.map(biopic =>
+      <Carousel.Item>
+        <img className="img-responesive center-block" src={biopic.src} alt={biopic.caption}/>
+        <Carousel.Caption><Badge>{biopic.caption}</Badge></Carousel.Caption>
+      </Carousel.Item>
+    );
+
     return (
       <Carousel>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=19k3Wgy5A7A_OmUdYjzv06MgDpBZQGZfx' alt="Alicia & Elias"/>
-          <Carousel.Caption>
-            <p>Alicia & Elias</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1EzczEPi7HN4jCJ_cFzI0XYXl-diSgEDK' alt="Dad 3"/>
-          <Carousel.Caption>
-            <p>Dad</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1wevuvLZur7BoHwp3zPK8rYJKlurS941Q' alt="Natalya, Thomas, & Mum"/>
-          <Carousel.Caption>
-            <p>Natalya, Thomas, & Mum</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1K99iIWvKgfg2TMMIAQV-R7QEYiw0fe8a' alt="Bike Power"/>
-          <Carousel.Caption>
-            <p>Bike Power</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1N1UbgysUPuG7_MgFjxXZpmtZIz6rVliG' alt="David, Isabelle, Jason, & Mum"/>
-          <Carousel.Caption>
-            <p>David, Isabelle, Jason, & Mum</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1NucIFA-iPtWBG5oAbQ2WJ2z4_bY8NvBU' alt="Mum 3"/>
-          <Carousel.Caption>
-            <p>Mum</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=13meD9yFVNQD2VrhQwFhFr2RsarkH4kDm' alt="Irina, Natalya, Thomas, & Dad"/>
-          <Carousel.Caption>
-            <p>Irina, Natalya, Thomas & Dad</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1k6VQ2426LO96NSRyHuL90nOf15zEp0S3' alt="Mum 2"/>
-          <Carousel.Caption>
-            <p><Badge>Mum</Badge></p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1-j452kFTtDcPj5pT2XmldA5OaCWvrThN' alt="New York City"/>
-          <Carousel.Caption>
-            <p>New York City</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1PIjUo1NrF0pp7huuHU7cbWpTAGXK4t5y' alt="Dad 2"/>
-          <Carousel.Caption>
-            <p>Dad</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=153UycoAdTdwzsKTHhV3Iydipg2p4ZFue' alt="Eric, Whitney, Peter, & David"/>
-          <Carousel.Caption>
-            <p>Eric, Whitney, Peter, & David</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1uGiU65FJjjIgfd75zbeywRffBT8h5Ou8' alt="Ali, Mary, Barbara, Whitney, & Anna"/>
-          <Carousel.Caption>
-            <p><Badge>Ali, Mary, Barbara, Whitney, & Anna</Badge></p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=14VuQxk-XEqDc-BSU14dZIxKIJY6x5scb' alt="Peace Corps"/>
-          <Carousel.Caption>
-            <p>Peace Corps</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1cbOJQU-lk2iy5zm5695r61gHGE5JpadV' alt="Austin & Sampson"/>
-          <Carousel.Caption>
-            <p><Badge>Austin and Sampson</Badge></p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1AVoWHyLqw-7gLcaTw7dA8tIi9oOABnP9' alt="David"/>
-          <Carousel.Caption>
-            <p>David</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1zLqy0RcU298IiZ_5YZgdenVV1QkHrV7r' alt="Sampson"/>
-          <Carousel.Caption>
-            <p>Sampson</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1Yulon_KdjDqdRT4-KFtJe3OLaRTFZFTs' alt="Kozub & Sampson"/>
-          <Carousel.Caption>
-            <p>Kozub & Sampson</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1DvE9ObfsN3QB9SJS4mj2EmtaS6187zNL' alt="Brenda, Karen, Jimmy, & Thomas"/>
-          <Carousel.Caption>
-            <p>Brenda, Karen, Jimmy, & Thomas</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1I4MiGeiVAJghCvmPYfzs8YQ9_oveLsYj' alt="Polish Tavern"/>
-          <Carousel.Caption>
-            <p><Badge>Polish Tavern</Badge></p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=19S-pryuRGyjmbL09VE6707B3DYKhPqSX' alt="Jimmy"/>
-          <Carousel.Caption>
-            <p>Jimmy</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1JGgaG4gno2V73hIEeX4kZkWQ6170txif' alt="Ba"/>
-          <Carousel.Caption>
-            <p>Ba</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1Hs6hcN0q-IiGIR-RvPm-JFlVnjFNHwde' alt="Dad"/>
-          <Carousel.Caption>
-            <p><Badge>Dad</Badge></p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1f_Ak_jraFR86pVDAJWL-RYybTgNIHshN' alt="Dad & Mum 2"/>
-          <Carousel.Caption>
-            <p>Dad & Mum</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1qczZ_3tkwRwbugB7twb5qNL2aM1XLN8o' alt="Brooms"/>
-          <Carousel.Caption>
-            <p>Brooms</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1ODMDXD6YH45x9u5tiMNxMvtHLyphWbFt' alt="Sjaan"/>
-          <Carousel.Caption>
-            <p>Sjaan</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1SpoQOQ-H1s73RYwl7cZNBfgSZ3ZXk6R1' alt="Ba, Angela, & Cuong"/>
-          <Carousel.Caption>
-            <p><Badge>Ba, Angela, & Cuong</Badge></p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1MpjrUWA1M4JZ7Pyupt50-j3yPNXmXzKe' alt="Travis"/>
-          <Carousel.Caption>
-            <p><Badge>Travis</Badge></p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1MapdxpIiIZmJ2gtNb1a5JCkSnmJ9slyV' alt="Graduation"/>
-          <Carousel.Caption>
-            <p><Badge>Graduation</Badge></p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1_2yErJjUMtXzYEQiG__ELOUua6AWHvjY' alt="Paintball"/>
-          <Carousel.Caption>
-            <p>Paintball</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=19cM6PbDctncSCkXiFyTWa7P-1fyrBdX-' alt="Chris"/>
-          <Carousel.Caption>
-            <p>Chris</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1scGHgqYdyJKsexUQHBo0qcZXmgF9Y_s3' alt="Mum"/>
-          <Carousel.Caption>
-            <p>Mum</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1GKEB2wssIsdCowgr_k-FoXuBYdSXd2UX' alt="The White House"/>
-          <Carousel.Caption>
-            <p>The White House</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="img-responsive center-block" src='https://drive.google.com/uc?export=view&id=1hVPqRO3zKQqKBIa_BtX2j6byLJ28WrNM' alt="First Suit"/>
-          <Carousel.Caption>
-            <p>First Suit</p>
-          </Carousel.Caption>
-        </Carousel.Item>
+        {carouselItems}
       </Carousel>
     );
   }
